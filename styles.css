@@ -1,0 +1,137 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and overall page styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main container styling */
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Patient info section */
+.patient-info {
+    width: 45%;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for patient info */
+.patient-info:hover {
+    transform: translateY(-10px);
+}
+
+/* Profile image styling */
+#profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #f2f2f2;
+}
+
+/* Name styling */
+#name {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Additional info like age, phone, etc. */
+#age-gender,
+#phone-number,
+#insurance-type {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+/* Diagnosis history section */
+#diagnosis-history {
+    margin-top: 20px;
+}
+
+/* Diagnosis history individual item */
+#diagnosis-history div {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#diagnosis-history div p {
+    margin: 4px 0;
+}
+
+/* Chart container styling */
+.chart-container {
+    width: 55%;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.8s ease-out;
+    height: 400px; /* Fix height for chart */
+}
+
+/* Animation for the chart */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .patient-info, .chart-container {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    #profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    #name {
+        font-size: 22px;
+    }
+}
